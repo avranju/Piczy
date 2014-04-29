@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Piczy" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2013-10.2.2">
+  <Role name="Piczy.Resizer">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=piczystorage;AccountKey=HCjq5HkVjkmTV/6LTqg7ijJ6l4cHjSTzWEcygwHxxlgOOzQKedUcVG7CeJfq/nJt9ZIXKuGXdPifh0E6zKpkpw==" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=piczystorage;AccountKey=HCjq5HkVjkmTV/6LTqg7ijJ6l4cHjSTzWEcygwHxxlgOOzQKedUcVG7CeJfq/nJt9ZIXKuGXdPifh0E6zKpkpw==" />
+      <Setting name="ImageSizes" value="640x480,1024x768,1920x1080,1600x900" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="avranju" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEGGIPnVbLIG4TsoI+YN5pLowDQYJKoZIhvcNAQEBBQAEggEAAvl1pdxAINntSDQzM5sxEjQKJL3GB2+bR7PpjIodboOEG80+WQnBruxN3lT/FXwqh4JhLJL8Ktq//1wtDMPxT9Oi5+i0i4XrAHOowpZcGuIzE31mK1UYv5FWhlcHPWwR4vI7nwc4XRoPAA5jTqqQ21FTNjyYuTmbXwk0JWdS18VXx8xwS1Ec8ozBJJP+J2+sMq2Hu3kwciRD6eI5vmBWu75jHzewJ6wLeJj1gyRGZoFiwp8cwtmTaSQzTG3j6EqAUlz/H98FlaMLp5AXDFR0pFLgN46J89ugVW4MqIqChQQP27hh5sZvb+3K6kYesFjTuYZZzbqS3nXdFg7pmDoKvDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECHBJIsJMDPf4gBAW7nrO8w5fU4jQ0+gRRwbD" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-03-17T23:59:59.0000000+05:30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="E656811E8AE1A814DA1BA8637F39C9EB2BAE81A0" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="Piczy.Web">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=piczystorage;AccountKey=HCjq5HkVjkmTV/6LTqg7ijJ6l4cHjSTzWEcygwHxxlgOOzQKedUcVG7CeJfq/nJt9ZIXKuGXdPifh0E6zKpkpw==" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=piczystorage;AccountKey=HCjq5HkVjkmTV/6LTqg7ijJ6l4cHjSTzWEcygwHxxlgOOzQKedUcVG7CeJfq/nJt9ZIXKuGXdPifh0E6zKpkpw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="avranju" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEGGIPnVbLIG4TsoI+YN5pLowDQYJKoZIhvcNAQEBBQAEggEAAvl1pdxAINntSDQzM5sxEjQKJL3GB2+bR7PpjIodboOEG80+WQnBruxN3lT/FXwqh4JhLJL8Ktq//1wtDMPxT9Oi5+i0i4XrAHOowpZcGuIzE31mK1UYv5FWhlcHPWwR4vI7nwc4XRoPAA5jTqqQ21FTNjyYuTmbXwk0JWdS18VXx8xwS1Ec8ozBJJP+J2+sMq2Hu3kwciRD6eI5vmBWu75jHzewJ6wLeJj1gyRGZoFiwp8cwtmTaSQzTG3j6EqAUlz/H98FlaMLp5AXDFR0pFLgN46J89ugVW4MqIqChQQP27hh5sZvb+3K6kYesFjTuYZZzbqS3nXdFg7pmDoKvDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECHBJIsJMDPf4gBAW7nrO8w5fU4jQ0+gRRwbD" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-03-17T23:59:59.0000000+05:30" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="E656811E8AE1A814DA1BA8637F39C9EB2BAE81A0" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
